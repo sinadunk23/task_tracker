@@ -14,7 +14,7 @@ st.set_page_config(page_title="Mastery Dashboard 2026", layout="wide", page_icon
 @st.cache_resource
 def init_connection():
     try:
-        return pymongo.MongoClient(st.secrets["mongo"]["uri"])
+        return pymongo.MongoClient(st.secrets["uri"])
     except:
         st.error("MongoDB Connection Failed. Check your Secrets!")
         return None
